@@ -100,14 +100,14 @@ const Testimonials = () => {
       className="relative overflow-hidden bg-gradient-to-b from-black via-indigo-950/80 to-black py-24 md:py-36"
       aria-label="Client Testimonials"
     >
-      <div
-        ref={bgTextRef}
-        className="absolute top-1/2 left-0 -translate-y-1/2 whitespace-nowrap opacity-[0.07] pointer-events-none will-change-transform"
-      >
-        <h2 className="text-[30vw] md:text-[14vw] font-black tracking-widest uppercase text-white">
-          ·TESTIMONIALS·
-        </h2>
-      </div>
+     <div
+  ref={bgTextRef}
+  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap opacity-[0.07] pointer-events-none will-change-transform"
+>
+  <h2 className="text-[30vw] md:text-[14vw] font-black tracking-widest uppercase text-white">
+    ·TESTIMONIALS·
+  </h2>
+</div>
 
       <div className="relative z-10 w-full overflow-hidden border-y border-white/5 bg-black/40 backdrop-blur-sm group">
         <div
