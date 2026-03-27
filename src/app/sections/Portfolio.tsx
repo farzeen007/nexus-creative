@@ -26,7 +26,7 @@ const projects = [
   {
     title: "Global Network",
     category: "Ecommerce Build",
-    image: "https://images.unsplash.com/photo-1523474253046-2cd2c78b6ad1?q=80&w=2000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1557672172-298e090bd0f1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     className: "md:col-start-1 md:row-span-1 h-[400px]",
   },
   {
