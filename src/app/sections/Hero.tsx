@@ -169,7 +169,7 @@ export const Hero = () => {
           ref={subtitleRef}
           className="mt-6 text-lg md:text-xl font-light tracking-wide text-indigo-200/80 max-w-2xl mx-auto"
         >
-          We transform visionary ideas into immersive digital realities with precision & spirit.
+          We transform visionary ideas into immersive digital realities with precision &amp; spirit.
         </p>
 
         <div className="mt-12 flex flex-wrap justify-center gap-6">

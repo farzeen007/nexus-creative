@@ -3,7 +3,6 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { useScrollVelocity } from "@/hooks/useScrollVelocity";
 import { cn } from "@/lib/utils";
 
 if (typeof window !== "undefined") {
@@ -45,7 +44,6 @@ const Testimonials = () => {
   const bgTextRef = useRef<HTMLDivElement>(null);
   const marqueeTrackRef = useRef<HTMLDivElement>(null);
 
-  const velocity = useScrollVelocity();
   const prefersReducedMotion = useReducedMotion();
 
   useGSAP(() => {
@@ -85,7 +83,7 @@ const Testimonials = () => {
           <span className="text-yellow-400 text-lg md:text-xl" aria-hidden="true">★★★★★</span>
 
           <p className="text-sm md:text-lg lg:text-xl leading-relaxed line-clamp-2">
-            "{t.quote}"
+            &quot;{t.quote}&quot;
           </p>
 
           <span className="text-white/40 text-xs md:text-sm whitespace-nowrap">

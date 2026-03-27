@@ -78,7 +78,7 @@ export const Footer = () => {
           </div>
 
           <div className="text-white/30 text-xs">
-            © 2026 NEXUS CREATIVE <br />
+            &copy; 2026 NEXUS CREATIVE <br />
             ALL RIGHTS RESERVED
           </div>
         </div>

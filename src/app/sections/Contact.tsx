@@ -135,7 +135,7 @@ const Contact = () => {
   };
 
   const renderField = (id: string, label: string, type: "input" | "textarea") => {
-    const Component = type as any;
+    const Component = type;
     return (
       <div className="relative mb-12 group">
         <label 
@@ -155,7 +155,7 @@ const Contact = () => {
           aria-label={label}
           required
           rows={type === "textarea" ? 4 : undefined}
-          onChange={(e: any) => setFormData({ ...formData, [id]: e.target.value })}
+          onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setFormData({ ...formData, [id]: e.target.value })}
         />
         <div className="bottom-border absolute bottom-0 left-0 h-[2px] w-0 bg-indigo-400" />
       </div>
@@ -245,7 +245,7 @@ const Contact = () => {
                 Message Sent!
               </h3>
               <p className="success-msg mt-4 text-white/50">
-                We'll sync with you shortly.
+                We&apos;ll sync with you shortly.
               </p>
             </div>
           )}

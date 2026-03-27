@@ -1,5 +1,5 @@
 "use client";
-import { useRef, ReactNode, useState, useEffect } from "react";
+import { useRef, ReactNode } from "react";
 import { gsap } from "@/lib/gsap";
 import { useGSAP } from "@gsap/react";
 import { cn } from "@/lib/utils";
@@ -11,7 +11,7 @@ interface MagneticButtonProps {
   strength?: number; 
 }
 
-export const MagneticButton = ({ children, className, onClick, strength = 0.4 }: MagneticButtonProps) => {
+export const MagneticButton = ({ children, className, onClick, strength = 1 }: MagneticButtonProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
@@ -31,8 +31,8 @@ export const MagneticButton = ({ children, className, onClick, strength = 0.4 }:
         const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
 
         if (distance < 80) {
-          const moveX = (deltaX / 80) * 20;
-          const moveY = (deltaY / 80) * 20;
+          const moveX = (deltaX / 80) * 20 * strength;
+          const moveY = (deltaY / 80) * 20 * strength;
 
           gsap.to(container, {
             x: moveX,
@@ -55,7 +55,7 @@ export const MagneticButton = ({ children, className, onClick, strength = 0.4 }:
       window.addEventListener("mousemove", handleGlobalMouseMove);
       return () => window.removeEventListener("mousemove", handleGlobalMouseMove);
     },
-    { scope: containerRef }
+    { scope: containerRef, dependencies: [strength] }
   );
 
   return (
